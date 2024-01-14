@@ -18,8 +18,6 @@
 }
 
 .primary-btn {
-  width: 180px;
-  height: 64px;
   border-radius: 8px;
   background: #FF900E;
   color: #FFF;
@@ -27,6 +25,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   border: none;
+  padding: 21px 24px 20px 25px;
 }
 
 a:hover,
@@ -141,6 +140,7 @@ header .title>:last-child {
 .team-description {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   max-width: 540px;
   gap: calc(28 / 1920 * 100vh);
 }
@@ -169,6 +169,77 @@ header .title>:last-child {
   /* 162.5% */
 }
 
+/* team section ends */
+/* experience section start */
+.experience {
+  display: flex;
+  gap: calc(146 / 1920 * 100vw);
+  padding: 0 calc(240 / 1920 * 100vw);
+  margin-top: 130px;
+}
+
+.experience .heading h1 {
+  max-width: 468px;
+  font-size: 2.8125rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  padding-left: calc(21 / 1920 * 100vw);
+  border-left: 5px solid #FF900E;
+}
+
+.experience p {
+  color: var(--Dark-03);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  /* 162.5% */
+  margin-top: 10px;
+}
+
+.experience p:first-child {
+  margin: 10px;
+}
+
+.experience h3 {
+  font-size: 1.25rem;
+}
+
+.brief-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.brief-info>* {
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.116);
+  padding: 30px 42px 30px 30px;
+  margin-top: 20px;
+}
+
+.experience button {
+  font-size: calc(25 / 16 * 1rem);
+  font-weight: 500;
+  line-height: 2.5rem;
+  padding: 46px 42px;
+  position: relative;
+  bottom: calc(123 / 1080 * 100vh);
+  right: calc(92 / 1920 * 100vw);
+}
+
+.experience button>span {
+  color: white;
+  font-size: calc(65 / 16 * 1rem);
+  font-weight: 700;
+  line-height: 4.5rem;
+  /* 107.692% */
+}
+
+
+
+
+
+
 /* responsive for tab */
 @media screen and (min-width:577px) and (max-width: 992px) {
   nav {
@@ -185,18 +256,18 @@ header .title>:last-child {
     padding: 0 20px;
   }
 
-  .teams{
+  .teams {
     flex-direction: column;
     gap: 30px;
   }
 
-  .team-photo{
+  .team-photo {
     border: 2px solid black;
     gap: 40px;
     justify-content: space-evenly;
   }
 
-  .team-description{
+  .team-description {
     align-items: center;
     text-align: center;
   }
@@ -225,20 +296,20 @@ header .title>:last-child {
     padding: 0 10px;
   }
 
-  .teams{
+  .teams {
     flex-direction: column;
   }
 
-  .team-photo{
+  .team-photo {
     width: 100%;
     grid-template-columns: 1fr;
   }
 
-  .team-photo img{
+  .team-photo img {
     width: 100%;
   }
-  
-  .team-description{
+
+  .team-description {
     align-items: center;
     text-align: center;
   }
