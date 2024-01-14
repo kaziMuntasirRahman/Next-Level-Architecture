@@ -7,7 +7,7 @@
   font-family: var(--default-font);
   color: var(--Dark-01);
   font-weight: 600;
-  border: 2px solid brown;
+  /* border: 2px solid brown; */
 }
 
 :root {
@@ -51,7 +51,8 @@ nav>:first-child {
   margin-right: auto;
 }
 
-nav a, nav h1{
+nav a,
+nav h1 {
   text-align: center;
   text-decoration: none;
 }
@@ -61,10 +62,10 @@ nav>h1>a {
   font-weight: 700;
 }
 
-.links{
+.links {
   display: flex;
   justify-content: space-between;
-  gap: calc(60 / 1920) * 1vw;
+  gap: calc((60 / 1920) * 100vw);
 }
 
 nav .links>a {
@@ -118,41 +119,127 @@ header .title>:last-child {
   margin: 32px auto 5px auto;
 }
 
+/* team section style start */
+.teams {
+  margin-top: calc((85 / 1080) * 100vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc((73 / 1920) * 100vw);
+}
+
+.team-photo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(24 / 1920 * 100vw);
+}
+
+.team-photo img {
+  border-radius: 8px;
+}
+
+.team-description {
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+  gap: calc(28 / 1920 * 100vh);
+}
+
+.team-description>h1 {
+  color: var(--Dark-03);
+  font-size: 2.815rem;
+  font-weight: 500;
+}
+
+.team-description>h1>:first-child {
+  color: var(--Dark-01);
+  font-weight: 700;
+}
+
+.team-description>h1>:last-child {
+  color: #FF900E;
+  font-weight: 700;
+}
+
+.team-description>p {
+  color: var(--Dark-03);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  /* 162.5% */
+}
+
 /* responsive for tab */
 @media screen and (min-width:577px) and (max-width: 992px) {
-  nav{
+  nav {
     flex-direction: column;
     gap: 20px;
     padding: 30px 50px 20px 50px;
   }
 
-  nav>*{
+  nav>* {
     margin: auto;
   }
 
-  .banner{
+  .banner {
     padding: 0 20px;
   }
+
+  .teams{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .team-photo{
+    border: 2px solid black;
+    gap: 40px;
+    justify-content: space-evenly;
+  }
+
+  .team-description{
+    align-items: center;
+    text-align: center;
+  }
+
 }
+
 
 
 /* responsive for mobile */
 @media screen and (max-width: 576px) {
-  nav{
+  nav {
     flex-direction: column;
     gap: 20px;
     padding: 2rem 3rem 1.25rem 3rem;
   }
 
-  nav>*{
+  nav>* {
     margin: auto;
   }
 
-  .links{
+  .links {
     gap: .5rem;
   }
 
-  .banner{
+  .banner {
     padding: 0 10px;
+  }
+
+  .teams{
+    flex-direction: column;
+  }
+
+  .team-photo{
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .team-photo img{
+    width: 100%;
+  }
+  
+  .team-description{
+    align-items: center;
+    text-align: center;
   }
 }
