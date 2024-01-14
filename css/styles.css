@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--default-font);
+  color: var(--Dark-01);
+  font-weight: 600;
+  border: 2px solid brown;
+}
+
+:root {
+  --Dark-01: #131313;
+  --Dark-03: #727272;
+  --default-bg: rgba(255, 144, 14, 0.10);
+  --default-font: 'Work Sans', sans-serif;
+}
+
+.primary-btn {
+  width: 180px;
+  height: 64px;
+  border-radius: 8px;
+  background: #FF900E;
+  color: #FFF;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+
+/* header section style start */
+header {
+  background: rgba(255, 144, 14, 0.10);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 240px 0 228px;
+}
+
+nav>:first-child {
+  margin-right: auto;
+}
+
+nav a, nav h1{
+  text-align: center;
+  text-decoration: none;
+}
+
+nav>h1>a {
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+
+.links{
+  display: flex;
+  justify-content: space-between;
+  gap: calc(60 / 1920) * 1vw;
+}
+
+nav .links>a {
+  color: var(--Dark-02);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 26px;
+  /* 144.444% */
+}
+
+header .title {
+  /* min-width: 50%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 868px;
+  gap: 20px;
+}
+
+header .title>:first-child {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+header .title>:last-child {
+  color: var(--Dark-03);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px;
+  /* 162.5% */
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.banner-img {
+  margin: 45px;
+  max-width: 100%;
+  height: auto;
+}
+
+.banner .primary-btn {
+  margin: 32px auto 5px auto;
+}
+
+/* responsive for tab */
+@media screen and (min-width:577px) and (max-width: 992px) {
+  nav{
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 50px 20px 50px;
+  }
+
+  nav>*{
+    margin: auto;
+  }
+
+  .banner{
+    padding: 0 20px;
+  }
+}
+
+
+/* responsive for mobile */
+@media screen and (max-width: 576px) {
+  nav{
+    flex-direction: column;
+    gap: 20px;
+    padding: 2rem 3rem 1.25rem 3rem;
+  }
+
+  nav>*{
+    margin: auto;
+  }
+
+  .links{
+    gap: .5rem;
+  }
+
+  .banner{
+    padding: 0 10px;
+  }
+}
