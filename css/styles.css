@@ -235,6 +235,9 @@ header .title>:last-child {
   /* 107.692% */
 }
 
+.experience .img-section img{
+  max-width: 100%;
+}
 
 
 
@@ -242,8 +245,12 @@ header .title>:last-child {
 
 /* responsive for tab */
 @media screen and (min-width:577px) and (max-width: 992px) {
-  nav {
+  nav,
+  .teams{
     flex-direction: column;
+  }
+  
+  nav {
     gap: 20px;
     padding: 30px 50px 20px 50px;
   }
@@ -257,12 +264,10 @@ header .title>:last-child {
   }
 
   .teams {
-    flex-direction: column;
     gap: 30px;
   }
 
   .team-photo {
-    border: 2px solid black;
     gap: 40px;
     justify-content: space-evenly;
   }
@@ -270,6 +275,10 @@ header .title>:last-child {
   .team-description {
     align-items: center;
     text-align: center;
+  }
+
+  .experience{
+    flex-direction: column-reverse;
   }
 
 }
@@ -312,5 +321,9 @@ header .title>:last-child {
   .team-description {
     align-items: center;
     text-align: center;
+  }
+
+  .experience{
+    flex-direction: column-reverse;
   }
 }
