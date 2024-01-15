@@ -16,6 +16,7 @@ body {
 
 :root {
   --Dark-01: #131313;
+  --Dark-02: #424242;
   --Dark-03: #727272;
   --default-bg: rgba(255, 144, 14, 0.10);
   --default-font: 'Work Sans', sans-serif;
@@ -49,8 +50,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   /* padding: 50px 240px 0 228px; */
-  padding: calc(50 / 1080 * 100vh) calc(240 / 1920 * 100vw)
-    calc(0 / 1080 * 100vh) calc(228 / 1920 * 100vw);
+  padding: calc(50 / 1080 * 100vh) calc(240 / 1920 * 100vw) calc(0 / 1080 * 100vh) calc(228 / 1920 * 100vw);
   max-width: 100%;
 }
 
@@ -296,6 +296,52 @@ header .title>:last-child {
 
 .acknowledgement-container .acknowledgement .stat {
   margin: 10px auto 2px auto;
+}
+
+/* facts section done, footer section start */
+footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-between;
+  align-content: space-between;
+  margin: calc(180 / 1080 * 100vh) auto calc(216 / 1080 * 100vh) auto;
+  max-width: 75vw;
+
+}
+
+footer>:first-child,
+footer>:nth-child(2),
+footer>:last-child {
+  grid-column: span 5;
+  margin: 0 auto;
+}
+
+footer>:first-child {
+  color: var(--Dark-01, #131313);
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+
+footer>:nth-child(2) {
+  margin: 24px auto 24px auto;
+  color: var(--Dark-03, #727272);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  /* 162.5% */
+}
+
+footer>:last-child {
+  border-radius: 8px;
+  background: #FFF4E7;
+  padding: 40px;
+  margin-top: 130px;
+  color: var(--Dark-02);
+  font-size: 1.25rem;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
 }
 
 
